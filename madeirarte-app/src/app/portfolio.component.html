@@ -1,0 +1,42 @@
+<section class="section portfolio-section" id="projetos" aria-labelledby="portfolio-title">
+  <div class="section-inner">
+    <div class="section-heading portfolio-heading">
+      <div>
+        <p class="eyebrow">MADEIRARTE <span>/</span> 02 · NOSSO PORTFÓLIO</p>
+        <h2 id="portfolio-title">Projetos recentes</h2>
+        <p>Veja alguns dos nossos projetos executados em Nova Lima e região.</p>
+      </div>
+      <p class="project-note">Seleção ilustrativa<br>Fotos reais em breve</p>
+    </div>
+
+    <div class="filter-list" aria-label="Filtrar projetos por ambiente">
+      @for (filter of filters; track filter) {
+        <button type="button" [class.active]="filter === activeFilter" [attr.aria-pressed]="filter === activeFilter" (click)="setFilter(filter)">{{ filter }}</button>
+      }
+    </div>
+
+    <div class="project-grid">
+      @for (project of filteredProjects; track project.title) {
+        <button class="project-card" type="button" [attr.aria-label]="'Ampliar ' + project.title" (click)="selectedProject = project">
+          <span class="project-image-wrap"><img [src]="project.image" [alt]="project.title + ' — imagem demonstrativa'" loading="lazy"><span class="project-zoom" aria-hidden="true">↗</span></span>
+          <span class="project-info"><span class="project-category">{{ project.category }}</span><strong>{{ project.title }}</strong><span>{{ project.description }}</span><small>Imagem demonstrativa</small></span>
+        </button>
+      } @empty {
+        <p class="empty-projects">Ainda não há projetos demonstrativos nesta categoria. Veja todos os ambientes disponíveis.</p>
+      }
+    </div>
+    <div class="portfolio-footer">
+      <button class="button button-dark" type="button" (click)="setFilter('Todos')">Ver todos os projetos <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+
+  @if (selectedProject; as project) {
+    <div class="lightbox" role="presentation" (click)="closeProject()">
+      <div class="lightbox-dialog" role="dialog" aria-modal="true" [attr.aria-label]="project.title" (click)="$event.stopPropagation()">
+        <button class="lightbox-close" type="button" aria-label="Fechar imagem ampliada" (click)="closeProject()">×</button>
+        <img [src]="project.image" [alt]="project.title + ' — imagem demonstrativa'">
+        <p><strong>{{ project.title }}</strong><span>{{ project.description }}</span></p>
+      </div>
+    </div>
+  }
+</section>

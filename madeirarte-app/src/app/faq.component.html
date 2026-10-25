@@ -1,0 +1,25 @@
+<section class="section faq-section" id="perguntas" aria-labelledby="faq-title">
+  <div class="section-inner faq-layout">
+    <div class="faq-intro">
+      <p class="eyebrow">MADEIRARTE <span>/</span> 07 · DÚVIDAS FREQUENTES</p>
+      <h2 id="faq-title">Perguntas mais comuns</h2>
+    </div>
+    <div class="faq-list">
+      @for (question of questions; track question; let index = $index) {
+        <article class="faq-item">
+          <h3>
+            <button type="button" [attr.aria-expanded]="openQuestion === index" [attr.aria-controls]="'faq-answer-' + index" (click)="toggleQuestion(index)">
+              {{ question }} <span aria-hidden="true">{{ openQuestion === index ? '−' : '+' }}</span>
+            </button>
+          </h3>
+          @if (openQuestion === index) {
+            <div class="faq-answer" [id]="'faq-answer-' + index">
+              <p>A resposta detalhada não foi incluída na cópia salva do site. Entre em contato para confirmar as informações do seu projeto.</p>
+              <a href="https://wa.me/553183316814?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer">Perguntar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+            </div>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>

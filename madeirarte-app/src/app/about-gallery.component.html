@@ -1,0 +1,13 @@
+<div class="about-gallery" aria-label="Alguns dos nossos ambientes">
+  <div class="about-gallery-main">
+    @for (image of images; track image.path; let index = $index) {
+      <img [class.active]="index === activeImage" [src]="image.path" [alt]="image.label + ' — imagem demonstrativa'" [attr.loading]="index === 0 ? 'eager' : 'lazy'">
+    }
+    <span class="image-note">Imagem demonstrativa · alguns dos nossos ambientes</span>
+  </div>
+  <div class="about-gallery-controls" aria-label="Escolher ambiente">
+    @for (image of images; track image.path; let index = $index) {
+      <button type="button" [class.active]="index === activeImage" [attr.aria-label]="'Mostrar ' + image.label" [attr.aria-pressed]="index === activeImage" (click)="showImage(index)"></button>
+    }
+  </div>
+</div>

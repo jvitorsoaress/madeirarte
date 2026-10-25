@@ -1,0 +1,18 @@
+<section class="hero" id="inicio" aria-label="Ambientes Madeirarte">
+  @for (slide of slides; track slide.image; let index = $index) {
+    <div class="hero-image" [class.active]="index === activeSlide" [style.background-image]="'url(' + slide.image + ')'"></div>
+  }
+  <div class="hero-shade"></div>
+  <div class="hero-content section-inner">
+    <p class="hero-kicker">MÓVEIS SOB MEDIDA <span>·</span> NOVA LIMA — MG</p>
+    <h1>{{ slides[activeSlide].title }}</h1>
+    <p class="hero-caption">{{ slides[activeSlide].category }} <span>·</span> Imagem demonstrativa</p>
+    <a class="button button-light" href="https://wa.me/553183316814?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Marcenaria%20Madeirarte." target="_blank" rel="noopener noreferrer">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="hero-pagination" aria-label="Escolher ambiente">
+    @for (slide of slides; track slide.image; let index = $index) {
+      <button type="button" [class.active]="index === activeSlide" [attr.aria-label]="'Mostrar ' + slide.category" [attr.aria-pressed]="index === activeSlide" (click)="showSlide(index)"></button>
+    }
+  </div>
+  <span class="hero-index">0{{ activeSlide + 1 }} <span>/ 04</span></span>
+</section>
