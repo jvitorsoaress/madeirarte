@@ -20,19 +20,19 @@ export class PortfolioComponent {
       title: 'Cozinha planejada',
       category: 'Cozinha',
       description: 'Madeira, pedra e integração',
-      image: '/images/hero-CgIEvHIT.jpg',
+      image: 'images/hero-CgIEvHIT.jpg',
     },
     {
       title: 'Sala de estar integrada',
       category: 'Sala',
       description: 'Painel e estante sob medida',
-      image: '/images/sala-DsNyqBne.jpg',
+      image: 'images/sala-DsNyqBne.jpg',
     },
     {
       title: 'Dormitório sob medida',
       category: 'Dormitório',
       description: 'Conforto em cada detalhe',
-      image: '/images/quarto-B5eoUHcD.jpg',
+      image: 'images/quarto-B5eoUHcD.jpg',
     },
   ];
 

@@ -16,37 +16,37 @@ export class ServicesComponent {
     {
       title: 'Cozinha Planejada',
       description: 'Cozinhas completas sob medida, do projeto à instalação.',
-      image: '/images/hero-CgIEvHIT.jpg',
+      image: 'images/hero-CgIEvHIT.jpg',
     },
     {
       title: 'Guarda-Roupa Planejado',
       description: 'Guarda-roupas sob medida para casal, solteiro e infantil.',
-      image: '/images/guardaroupa-DsGHAAuL.jpg',
+      image: 'images/guardaroupa-DsGHAAuL.jpg',
     },
     {
       title: 'Closet Planejado',
       description: 'Walk-in closets e closets compactos projetados para você.',
-      image: '/images/closet-DYzXqLNB.jpg',
+      image: 'images/closet-DYzXqLNB.jpg',
     },
     {
       title: 'Painel de TV e Rack',
       description: 'Painéis de TV planejados que transformam a sala de estar.',
-      image: '/images/sala-DsNyqBne.jpg',
+      image: 'images/sala-DsNyqBne.jpg',
     },
     {
       title: 'Móveis para Banheiro',
       description: 'Gabinetes e armários planejados para banheiro e lavabo.',
-      image: '/images/banheiro-CqbNv-QV.jpg',
+      image: 'images/banheiro-CqbNv-QV.jpg',
     },
     {
       title: 'Home Office',
       description: 'Escritórios domésticos planejados para máxima produtividade.',
-      image: '/images/escritorio-BaPBtRLO.jpg',
+      image: 'images/escritorio-BaPBtRLO.jpg',
     },
     {
       title: 'Dormitório Infantil',
       description: 'Quartos infantis criativos e funcionais que crescem com seu filho.',
-      image: '/images/infantil-BwIbH5lv.jpg',
+      image: 'images/infantil-BwIbH5lv.jpg',
     },
   ];
 

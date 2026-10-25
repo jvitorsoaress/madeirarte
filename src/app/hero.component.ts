@@ -16,22 +16,22 @@ export class HeroComponent {
     {
       title: 'Salas de estar que convidam ao aconchego',
       category: 'Salas de estar',
-      image: '/images/sala-DsNyqBne.jpg',
+      image: 'images/sala-DsNyqBne.jpg',
     },
     {
       title: 'Cozinhas planejadas para viver bons momentos',
       category: 'Cozinhas planejadas',
-      image: '/images/hero-CgIEvHIT.jpg',
+      image: 'images/hero-CgIEvHIT.jpg',
     },
     {
       title: 'Closets pensados para a sua rotina',
       category: 'Closets',
-      image: '/images/closet-DYzXqLNB.jpg',
+      image: 'images/closet-DYzXqLNB.jpg',
     },
     {
       title: 'Um espaço de trabalho feito para você',
       category: 'Escritórios',
-      image: '/images/escritorio-BaPBtRLO.jpg',
+      image: 'images/escritorio-BaPBtRLO.jpg',
     },
   ];
 
